@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Faker\Factory as Faker;
+use Illuminate\Support\Facades\DB;
 
 class AutoSeeder extends Seeder
 {
@@ -12,12 +12,9 @@ class AutoSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create();
-		for ($i=0; $i < 50; $i++) {
-    		\DB::table('autos')->insert(array(
-           			'marca' => $faker->word,
-           			'modelo' => $faker->randomDigit
-    		));
-		}
+        DB::table('autos')->insert([
+            'marca' => 'Toyota',
+            'modelo' => '1999',
+        ]);
     }
 }

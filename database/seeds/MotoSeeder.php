@@ -13,7 +13,7 @@ class MotoSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-		    for ($i=0; $i < 50; $i++) {
+		    for ($i=0; $i < 99; $i++) {
     		  \DB::table('motos')->insert(array(
            		'marca' => $faker->word,
            		'modelo' => $faker->randomDigit,
