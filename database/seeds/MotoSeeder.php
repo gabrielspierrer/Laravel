@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Faker\Factory as Faker;
+use App\Moto;
 
 class MotoSeeder extends Seeder
 {
@@ -12,13 +12,6 @@ class MotoSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create();
-		    for ($i=0; $i < 99; $i++) {
-    		  \DB::table('motos')->insert(array(
-           		'marca' => $faker->word,
-           		'modelo' => $faker->randomDigit,
-           		'color' => $faker->colorName
-    		  ));
-		    }
+        factory(Moto::class, 99)->create();
     }
 }

@@ -15,9 +15,9 @@ class CreateAutosTable extends Migration
     {
         Schema::create('autos', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('marca');
             $table->string('modelo');
+            $table->timestamps();
         });
     }
 

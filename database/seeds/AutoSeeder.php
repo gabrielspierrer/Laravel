@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use App\Auto;
 
 class AutoSeeder extends Seeder
 {
@@ -12,7 +12,7 @@ class AutoSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('autos')->insert([
+        Auto::create([
             'marca' => 'Toyota',
             'modelo' => '1999',
         ]);

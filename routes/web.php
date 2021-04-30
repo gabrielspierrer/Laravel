@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MotoController;
+use App\Http\Controllers\AutoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,3 +34,7 @@ Route::get('/saludar/{name}/{lastName}', function ($name, $lastName) {
 Route::get('index', [HomeController::class, 'index']);
 
 Route::get('show', [HomeController::class, 'show']);
+
+Route::get('motos', [MotoController::class, 'index']);
+
+Route::get('autos', [AutoController::class, 'index']);
