@@ -16,8 +16,7 @@
 		<form action="/search" method="get">
 			<div class="input-group">
 				<input type="search" name="search" placeholder="Buscar..." class="form-control form-control-sm mr-1">
-				<button type="submit" class="btn btn-outline-primary btn-sm mr-1">Buscar</button>
-				<a href="{{ url('pizzas') }}" class="btn btn-outline-secondary btn-sm">Volver</a>
+				<button type="submit" class="btn btn-outline-primary btn-sm">Buscar</button>
 			</div>
 		</form>
 	</div>
@@ -55,8 +54,8 @@
 		@endforeach
 		</tbody>
 	</table>
-	<div class="d-flex justify-content-center">
-            {!! $pizzas->appends(['sort' => 'department'])->links() !!}
+	<div class="pagination pagination-sm">
+   		{{ $pizzas->links() }}
     </div>
 </div>
 </body>
