@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MotoController;
 use App\Http\Controllers\AutoController;
+use App\Http\Controllers\PizzaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,3 +39,7 @@ Route::get('show', [HomeController::class, 'show']);
 Route::get('motos', [MotoController::class, 'index']);
 
 Route::get('autos', [AutoController::class, 'index']);
+
+Route::resource('pizzas', 'PizzaController');
+
+Route::get('/search', [PizzaController::class, 'search']);
