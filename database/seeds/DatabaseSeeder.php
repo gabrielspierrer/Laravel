@@ -14,5 +14,6 @@ class DatabaseSeeder extends Seeder
         $this->call(AutoSeeder::class);
         $this->call(MotoSeeder::class);
         $this->call(PizzaSeeder::class);
+        $this->call(ProductoSeeder::class);
     }
 }
