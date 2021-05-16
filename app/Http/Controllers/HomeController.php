@@ -17,4 +17,8 @@ class HomeController extends Controller
 
     	return view('show', compact('fecha'));
     }
+
+    public function __construct(){
+        $this->middleware('domingo');
+    }
 }

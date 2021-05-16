@@ -43,3 +43,16 @@ Route::get('autos', [AutoController::class, 'index']);
 Route::resource('pizzas', 'PizzaController');
 
 Route::get('/search', [PizzaController::class, 'search']);
+
+Route::get('/test', ['middleware' => 'domingo', function(){
+    return 'Probando ruta de middleware';
+}]);
+
+Route::group(['middleware' => 'domingo'], function(){
+    Route::get('/probando/ruta', function(){
+        return 'get';
+    });
+    Route::post('/probando/ruta', function(){
+        return 'post';
+    });
+});
